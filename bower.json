@@ -1,0 +1,10 @@
+{
+  "name": "ScienceHeroes",
+  "version": "1.0.0",
+  "main": "main.lua",
+  "dependencies": {
+    "log": "~0.1.0",
+    "cacharro": "~0.1.0"
+  },
+  "private": true
+}
