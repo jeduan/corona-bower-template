@@ -4,12 +4,14 @@
 --
 -----------------------------------------------------------------------------------------
 
-require('bower_require')()
+require('bower_require')({
+	MobDebug = 'src.mobdebug'
+})
 
 local log = require 'bower.log'
 local cacharro = require 'bower.cacharro'
-
-log(package.loaded)
+local mobdebug = require 'bower.MobDebug'
+mobdebug.start()
 
 log.disabled = true
 log 'Not printed'
