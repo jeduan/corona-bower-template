@@ -18,7 +18,7 @@ local function parseJson(filename, folder)
 	return ret
 end
 
-local function requireDependencies(requireFiles)
+local function requireDependencies(t, requireFiles)
 	local contents = parseJson('bower.json')
 	requireFiles = requireFiles or {}
 	local packages = {}
@@ -28,7 +28,7 @@ local function requireDependencies(requireFiles)
 			packages[key] = true
 			local str = 'vendor.'..key..'.'..key
 			if requireFiles[key] then
-				str = 'vendor.' .. key '.' .. requireFiles[key]
+				str = 'vendor.' .. key .. '.' .. requireFiles[key]
 			end
 
 			package.loaded['bower.'..key] = require(str)
