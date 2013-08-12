@@ -4,7 +4,7 @@
 --
 -----------------------------------------------------------------------------------------
 
-require 'bower_require'
+require('bower_require')()
 
 local log = require 'bower.log'
 local cacharro = require 'bower.cacharro'
