@@ -4,14 +4,12 @@
 --
 -----------------------------------------------------------------------------------------
 
--- Your code here
+require 'bower_require'
 
-local log = require 'vendor.log.log'
-local cacharro = require 'vendor.cacharro.cacharro'
+local log = require 'bower.log'
+local cacharro = require 'bower.cacharro'
 
-log 'todo funciona bien!'
-
-log('simulator: ', cacharro.isSimulator)
+log(package.loaded)
 
 log.disabled = true
 log 'Not printed'
