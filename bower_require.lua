@@ -32,7 +32,6 @@ local function requireDependencies(t, requireFiles)
 			end
 
 			package.loaded['bower.'..key] = require(str)
-			package.loaded[str] = nil
 		end
 	end
 	return packages
